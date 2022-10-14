@@ -10,9 +10,7 @@
 			}
 		</style>
 
-        <body onload="chart(shadowRoot)">
-            <div id="myDiagramDiv"></div>
-        </body>
+        <div id="myDiagramDiv"></div>
 
 	`;
 
@@ -21,10 +19,6 @@
             super();
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content.cloneNode(true));
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.dispatchEvent(event);
-            });
             this._props = {};
             this.init(shadowRoot)
         }
@@ -48,6 +42,7 @@
             }
             console.log("library importiert")
             chart(shadowRoot);
+            console.log("chart wird angezeigt")
 
         }
     }
@@ -73,7 +68,7 @@
         console.log("code funktioniert");
 
         var $ = go.GraphObject.make;
-        myDiagram = $(go.Diagram, "myDiagramDiv");
+        myDiagram = $(go.Diagram, shadowRoot.querySelector("#myDiagramDiv"));
         var nodeDataArray = [
             { key: "Alpha", color: "lime" },
             { key: "Beta", color: "cyan" },
