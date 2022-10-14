@@ -4,7 +4,7 @@
 	"name": "Demo GoJS",
 	"description": "A GoJS demo",
 	"newInstancePrefix": "hellogo",
-	"icon": "https://marylinem.github.io/",
+	"icon": "https://marylinem.github.io/HelloGoJS/HelloGo/icon.png",
 	"vendor": "Demo",
 	"eula": "EULA",
 	"license": "1.0",
@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-demo-hellogo",
-			"url": "https://marylinem.github.io/",
+			"url": "https://marylinem.github.io/HelloGoJS/HelloGo/hellogo.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}	
