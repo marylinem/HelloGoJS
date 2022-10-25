@@ -68,8 +68,8 @@
         console.log("code funktioniert");
         var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
 
-       for(v of data){
-           makeChart(v)
+       for(k in data){
+           makeChart(data[k])
        }
 
     }
