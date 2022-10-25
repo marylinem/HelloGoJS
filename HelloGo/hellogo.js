@@ -69,7 +69,7 @@
         var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
 
        for(k in data){
-           makeChart(data[k])
+           makeChart(data[k], shadowRoot)
        }
 
     }
