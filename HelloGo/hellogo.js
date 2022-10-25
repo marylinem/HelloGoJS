@@ -66,17 +66,21 @@
 
     function chart(shadowRoot) {
         console.log("code funktioniert");
+        var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
 
+       for(v of data){
+           makeChart(v)
+       }
+
+    }
+
+    function makeChart(tableau, shadowRoot){
         var $ = go.GraphObject.make;
         myDiagram = $(go.Diagram, shadowRoot.querySelector("#myDiagramDiv"));
-        var nodeDataArray = [
-            { key: "Alpha", color: "lime" },
-            { key: "Beta", color: "cyan" },
 
-        ];
-        var linkDataArray = [
-            { to: "Beta", from: "Alpha", color: "red" }
-        ];
+      
+        var nodeDataArray = tableau.map(e=>({key:e}));
+        var linkDataArray = tableau.reduce((acc,x,i,t)=>i==(t.length-1) ? acc : (acc.concat([{from: x, to:t[i+1]}])), []);
         myDiagram.model = new go.GraphLinksModel(nodeDataArray, linkDataArray);
         myDiagram.nodeTemplate =
             $(go.Node, "Auto",
@@ -87,7 +91,6 @@
                     new go.Binding("text", "key")
                 )
             );
-
 
     }
 
