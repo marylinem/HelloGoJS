@@ -68,7 +68,8 @@
 
     function chart(shadowRoot) {
         console.log("code funktioniert");
-        var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
+        //var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
+        var data = myDataBinding.data
 
        for(k in data){
            makeChart(data[k], shadowRoot)
