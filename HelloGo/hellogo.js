@@ -69,7 +69,7 @@
     function chart(shadowRoot, myDataBinding) {
         console.log("code funktioniert");
         //var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
-        var data = myDataBinding.data
+        var data = myDataBinding
 
        for(k in data){
            makeChart(data[k], shadowRoot)
