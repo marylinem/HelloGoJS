@@ -41,7 +41,7 @@
 
             }
             console.log("library importiert")
-            chart(shadowRoot, this.myDataBinding);
+            chart(shadowRoot);
             console.log("chart wird angezeigt")
             console.log(this.myDataBinding)
 			console.log("Data Binding funktioniert")
@@ -66,10 +66,9 @@
     }
 
 
-    function chart(shadowRoot, myDataBinding) {
+    function chart(shadowRoot) {
         console.log("code funktioniert");
         var data = {Helen: ["Bewerbung", "Interview1", "Interview2","Angebot erhalten"]}
-        //var data = myDataBinding.data
 
        for(k in data){
            makeChart(data[k], shadowRoot)
