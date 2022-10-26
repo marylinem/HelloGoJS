@@ -43,6 +43,8 @@
             console.log("library importiert")
             chart(shadowRoot);
             console.log("chart wird angezeigt")
+            console.log(this.myDataBinding)
+			console.log("Data Binding funktioniert")
 
         }
     }
